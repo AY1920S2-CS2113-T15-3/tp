@@ -29,6 +29,25 @@ public class Module {
         }
     }
 
+    /**
+     * Constructor for Module.
+     * @param id module code/id, eg: "CS2113"
+     * @param name module name, eg: "Software Engineering & Object-Oriented Programming"
+     * @param preReqMods list of modules that are prerequisites
+     */
+
+    public Module(String id, String name, String... preReqMods) {
+        this.id = id;
+        this.name = name;
+        boolean isLevel1000Mod = id.charAt(2) == '2'; // will run into error when module code has 3 letters instead of 2
+        boolean hasNoPreReq = preReqMods.length == 0;
+        if (isLevel1000Mod || hasNoPreReq) {
+            isSUable = true;
+        } else {
+            isSUable = false;
+        }
+    }
+
     @Override
     public String toString() {
         String returnString = null;
