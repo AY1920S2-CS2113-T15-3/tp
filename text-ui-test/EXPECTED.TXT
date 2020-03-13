@@ -4,11 +4,43 @@ Hello from
 | | | | | | | |/ / _ \
 | |_| | |_| |   <  __/
 |____/ \__,_|_|\_\___|
-
 What can I do for you?
+
+
 Okay! I have added this module to your module list:
-ID: CS2113 | Semester: 19-20 Semester 2
+ID: CS2113 | Sem: 19-20 Semester 2
+
+
 Okay! I have added this module to your module list:
-Name: Software Engineering & Object-Oriented Programming | Semester: 19-20 Semester 2
+Name: Software Engineering & Object-Oriented Programming | Sem: 19-20 Semester 2
+
+
+Okay! I have added this module to your module list:
+ID: CS1010 | Sem: 19-20 Semester 1
+
+
+Okay! I have added this module to your module list:
+ID: CS4241 | Sem: 19-20 Semester 2
+
+
+Okay! Here is your module plan:
+19-20 Semester 2
+1.[✗] ID: CS2113 | Sem: 19-20 Semester 2
+2.[✗] Name: Software Engineering & Object-Oriented Programming | Sem: 19-20 Semester 2
+3.[✗] ID: CS4241 | Sem: 19-20 Semester 2
+
+19-20 Semester 1
+1.[✗] ID: CS1010 | Sem: 19-20 Semester 1
+
+
+Okay, i've marked the module as done!
+
+
+Okay! Here are your completed modules:
+19-20 Semester 2
+1.[✓] ID: CS2113 | Sem: 19-20 Semester 2
+
+19-20 Semester 1
+
 
 bye!

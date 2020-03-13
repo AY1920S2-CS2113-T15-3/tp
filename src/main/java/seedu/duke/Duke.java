@@ -3,32 +3,48 @@ package seedu.duke;
 import java.util.Scanner;
 
 import seedu.duke.command.Command;
-import seedu.duke.data.ModuleList;
+import seedu.duke.data.AvailableModulesList;
+import seedu.duke.data.SelectedModulesList;
 import seedu.duke.parser.Parser;
+import seedu.duke.ui.Ui;
 
 
 public class Duke {
 
-    private static ModuleList moduleList = new ModuleList();
+    private static AvailableModulesList availableModulesList;
+    private static SelectedModulesList selectedModulesList;
+    private static Ui ui;
+
+    /**
+     * Instantiate all required classes.
+     */
+    public Duke() {
+        ui = new Ui();
+        availableModulesList = new AvailableModulesList();
+        selectedModulesList = new SelectedModulesList();
+    }
+
+    /**
+     * Main program to run.
+     */
+    public void run() {
+        ui.greetUser();
+        String fullCommand;
+        boolean isExit = false;
+        Scanner in = new Scanner(System.in);
+        do {
+            fullCommand = in.nextLine();
+            Command command = Parser.parse(fullCommand);
+            command.execute(selectedModulesList, availableModulesList);
+            isExit = command.isExit();
+        } while (!isExit);
+        ui.greetFarewell();
+    }
 
     /**
      * Main entry-point for the java.duke.Duke application.
      */
     public static void main(String[] args) {
-        String logo = " ____        _        \n"
-                + "|  _ \\ _   _| | _____ \n"
-                + "| | | | | | | |/ / _ \\\n"
-                + "| |_| | |_| |   <  __/\n"
-                + "|____/ \\__,_|_|\\_\\___|\n";
-        System.out.println("Hello from\n" + logo);
-        System.out.println("What can I do for you?");
-        Scanner in = new Scanner(System.in);
-        String fullCommand = in.nextLine();
-        while (!fullCommand.equals("bye")) {
-            Command command = Parser.parse(fullCommand);
-            command.execute(moduleList);
-            fullCommand = in.nextLine();
-        }
-        System.out.println(System.lineSeparator() + "bye!");
+        new Duke().run();
     }
 }

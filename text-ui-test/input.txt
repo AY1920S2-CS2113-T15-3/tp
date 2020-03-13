@@ -1,3 +1,8 @@
 add id/CS2113 s/19-20 Semester 2
 add n/Software Engineering & Object-Oriented Programming s/19-20 Semester 2
+add id/CS1010 s/19-20 Semester 1
+add id/CS4241 s/19-20 Semester 2
+view /mp
+done id/CS2113 s/19-20 Semester 2
+view /dm
 bye
